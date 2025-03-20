@@ -1,79 +1,38 @@
-<html>
-  <!-- Standard Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content="#00A878"> <!-- EV Green Theme -->
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="Ecovo">
-  <meta name="keywords" content="EV Charging Stations, Electric Vehicle Chargers, Find EV Charger, EV Charging Near Me, Sustainable Transport, Green Energy, Ecovo Charging Network">
-  <meta name="description" content="Find and access the nearest EV charging stations effortlessly with Ecovo. Bringing all EV chargers under one roof, we ensure a seamless, stress-free electric vehicle experience with nationwide coverage.">
+<html lang="en" class="scroll-smooth">
   
-  <!-- Open Graph (OG) for Social Media -->
-  <meta property="og:title" content="Ecovo - Find EV Charging Stations Near You">
-  <meta property="og:description" content="Eliminate range anxiety with Ecovo! Locate the nearest EV charging stations and enjoy 24/7 access to a reliable, tech-driven charging network.">
-  <meta property="og:image" content="https://www.ecovo.in/assets/images/ecovo-preview.jpg">
-  <meta property="og:url" content="https://www.ecovo.in">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Ecovo">
-  
-  <!-- Twitter Card for X (Twitter) -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ecovo - All EV Chargers Under One Roof">
-  <meta name="twitter:description" content="Find the nearest charging station for your electric vehicle with Ecovo's seamless, reliable EV charging network.">
-  <meta name="twitter:image" content="https://www.ecovo.in/assets/images/ecovo-preview.jpg">
-  <meta name="twitter:site" content="@Ecovo_Official">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.ecovo.in">
-  
-  <title>Ecovo - Locate the Nearest EV Charging Stations</title>
-  <link rel="icon" type="image/png" sizes="192x192" href="image/android-chrome-192x192.png">
-  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <head>
+
+<title>Ecovo - Locate the Nearest EV Charging Stations</title>
+<link rel="icon" type="image/png" sizes="192x192" href="image/android-chrome-192x192.png">
+
+    
+    
+
+    
+
     <!-- Performance optimization: Preload critical resources -->
-    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <!-- <link rel="preload" href="https://cdn.tailwindcss.com" as="script"> -->
     
     <!-- Header Scripts -->
-    <script id="header-scripts">
-      // This script tag will be replaced with actual scripts.head content
-      if (window.scripts && window.scripts.head) {
-        document.getElementById('header-scripts').outerHTML = window.scripts.head;
-      }
-    </script>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNDPM9400T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZNDPM9400T');
-</script>
 
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
+   
     <!-- Font stylesheet -->
 
-    <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
 
     <!-- Core CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    // render the settings object
-    //console.log('settings', [object Object]);
     document.addEventListener('DOMContentLoaded', function() {
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               primary: {
-                DEFAULT: '#4CAF50',
+                DEFAULT: '{{settings.colors.primary}}',
                 50: '#f8f8f8',
                 100: '#e8e8e8', 
                 200: '#d3d3d3',
@@ -87,7 +46,7 @@
                 950: '#030303',
               },
               secondary: {
-                DEFAULT: '#2196F3',
+                DEFAULT: '{{settings.colors.secondary}}',
                 50: '#f8f8f8',
                 100: '#e8e8e8',
                 200: '#d3d3d3', 
@@ -101,7 +60,7 @@
                 950: '#030303',
               },
               accent: {
-                DEFAULT: '',
+                DEFAULT: '{{settings.colors.accent}}',
                 50: '#f8f8f8',
                 100: '#e8e8e8',
                 200: '#d3d3d3',
@@ -116,9 +75,9 @@
               },
             },
             fontFamily: {
-              sans: ['Montserrat, sans-serif', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
-              heading: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
-              body: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+              sans: ['{{settings.fonts.primary}}', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+              heading: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+              body: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
             },
             spacing: {
               '18': '4.5rem',
@@ -200,109 +159,58 @@
     });
     </script>
 
-    <!-- Utilities and Components -->
-    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
-    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
     
-    <!-- Optimized Font Loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Dynamic Meta Tags -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="robots" content="">
-    <meta name="google-site-verification" content="">
-    <meta name="baidu-verification" content="">
-    <meta name="yandex-verification" content="">
-    <meta name="bing-verification" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="EV Owners Hub">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
-  
-    
-    <!-- Font Links -->
-   
-    <link rel="icon" type="image/x-icon" href="">
-
-    <style>
-      h1, h2, h3, h4, h5, h6 {
-        font-family: Montserrat, sans-serif, Inter, system-ui, sans-serif;
-      }
-      body {
-        font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
-      }
-    </style>
- <body class="antialiased text-gray-800 min-h-screen flex flex-col">
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
-       Skip to main content
-    </a>
-
-    <!-- Main content area -->
-    <main id="main-content" class="flex-1 relative h-full">
-      <div id="RolloutPageContent"><element id="00c1f47f-02a1-4bff-a2c1-fde94fa04f47" data-section-id="00c1f47f-02a1-4bff-a2c1-fde94fa04f47">
-
-
-        <element id="ba332b02-6a38-43ee-a16c-bd741061d91c" data-section-id="ba332b02-6a38-43ee-a16c-bd741061d91c">
-
-            <div id="root">
-                <section id="header" class="relative min-h-[5vh] bg-neutral-900">
-                  <nav class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                      <div class="flex justify-between items-center h-16">
-                        <div class="flex-shrink-0">
-                          <a href="/" class="flex items-center">
-                            <span class="text-2xl font-bold text-[#2ECC71]">ECOVO</span>
-                          </a>
-                        </div>
-                        
-                        <!-- Desktop Menu -->
-                        <div class="hidden md:flex space-x-4">
-                          <a href="index.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                          <a href="market1.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Market</a>
-                          <a href="contact.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                          <a href="about.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">About us</a>
-                        </div>
-                        
-                        <!-- Mobile Menu Button -->
-                        <div class="md:hidden flex items-center">
-                          <button id="mobileMenuButton" class="text-gray-300 focus:outline-none">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-              
-                    <!-- Mobile Menu -->
-                    <div id="mobileMenu" class="hidden md:hidden bg-neutral-900 px-2 pt-2 pb-3 flex flex-col md:flex-row md:space-x-4">
-                      <a href="index.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                      <a href="market1.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Market</a>
-                      <a href="contact.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                      <a href="about.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">About us</a>
-                    </div>
-                  </nav>
-                </section>
+      <div id="root">
+        <section id="header" class="relative min-h-[5vh] bg-neutral-900">
+          <nav class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                  <a href="/" class="flex items-center">
+                    <span class="text-2xl font-bold text-[#2ECC71]">ECOVO</span>
+                  </a>
+                </div>
+                
+                <div class="hidden md:block">
+                  <div class="ml-10 flex items-center space-x-4">
+                    <a href="index.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="market1.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Market</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    <a href="about.html" class="text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">About us</a>
+                  </div>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                  <button id="menuBtn" class="text-gray-300 hover:text-white">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              
-              <script>
-                document.getElementById('mobileMenuButton').addEventListener('click', function() {
-                  document.getElementById('mobileMenu').classList.toggle('hidden');
-                });
-              </script>
-              
+            </div>
+    
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden bg-neutral-900 px-4 pt-4 pb-6">
+              <a href="index.html" class="block text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+              <a href="market1.html" class="block text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Market</a>
+              <a href="contact.html" class="block text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+              <a href="about.html" class="block text-gray-300 hover:text-[#2ECC71] px-3 py-2 rounded-md text-sm font-medium transition-colors">About us</a>
+            </div>
+          </nav>
+        </section>
+      </div>
+    
+      <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+          document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+      </script>
+    </body>
+</div>
+</element><element id="8c0e9da3-0138-405c-aa25-2804723ab0c8" data-section-id="8c0e9da3-0138-405c-aa25-2804723ab0c8">
+
+
      
 <div id="root">
 <section id="about-mission" class="py-16 md:py-24 bg-white dark:bg-neutral-900">
